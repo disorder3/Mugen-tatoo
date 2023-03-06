@@ -1,0 +1,22 @@
+@import "./mixin";
+
+.Logn {
+  @include display-flex;
+  flex-direction: row;
+  width: var(--width-desktop);
+  padding: var(--padding);
+  padding-bottom: var(--padding-bottom);
+  gap: var(--gap);
+  .form {
+    padding: var(--padding);
+    width: var(--image-width);
+    padding-bottom: var(--padding-bottom);
+    .connect {
+      width: var(--width-desktop);
+      .error {
+        font-size: var(--font-size);
+        color: rgb(248, 116, 116);
+      }
+    }
+  }
+}

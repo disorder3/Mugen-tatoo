@@ -1,0 +1,18 @@
+@mixin display-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @mixin background-image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  }
+
+  @mixin size-image {
+    max-width: 300px;
+    min-width: 300px;
+    min-height: 350px;
+    max-height: 350px;
+  }

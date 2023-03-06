@@ -1,0 +1,39 @@
+
+html {
+  top: 0;
+  left: 0;
+  min-width: var(--width-desktop);
+  max-width: var(--width-desktop);
+  min-height: var(--height-desktop);
+  max-height: var(--height-desktop);
+  display: flex;
+  flex-direction: column;
+  background-image: url(../image/wallpapermugen.avif);
+  body {
+    font-family: "Spectral-Regular", sans-serif;
+    max-height: 100vh;
+    scroll-behavior: smooth;
+    overflow: auto;
+    cursor: url("../image/kisspng-clip-art-old-school-tattoo-computer-icons-tattoo-tattoo-machine-free-tools-and-utensils-icons-5b882b0e65d103.5030198015356505744171.png"),
+      pointer;
+    .scroll-container {
+      overflow-y: scroll;
+      scroll-behavior: smooth;
+      .scroll-page {
+        height: 100%;
+        h1 {
+          color: var(--color-light);
+        }
+      }
+    }
+  }
+}
+
+.button {
+  border-radius: var(--border-radius);
+  background: var(--color-gradient);
+  border: 1px solid var(--color-button) !important;
+}
+
+
+

@@ -1,0 +1,23 @@
+{
+  "name": "front-mugen",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "babel src/index.js -d src/.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "jeremy",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^0.9.4"
+  },
+  "type": "module",
+  "description": "",
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/preset-react": "^7.18.6"
+  }
+}

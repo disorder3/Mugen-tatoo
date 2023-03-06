@@ -1,0 +1,107 @@
+@import "./mixin";
+
+#page3 {
+  width: var(--width-desktop);
+  padding: var(--padding);
+  padding-top: 5rem;
+  padding-bottom: var(--padding-bottom);
+}
+
+.sliderImage {
+  display: flex;
+  flex-direction: row;
+  overflow-y: scroll;
+  gap: 1rem;
+  .imageScroll {
+    width: var(--image-width);
+    height: var(--image-height);
+    border-radius: var(--border-radius);
+    &.imageScroll:hover {
+      width: 500px;
+      height: 500px;
+      transition: 0.7s ease-in-out;
+      filter: grayscale(0%);
+    }
+  }
+}
+
+.imageGallerie {
+  @include display-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: var(--width-desktop);
+  height: auto;
+  gap: 1rem;
+  padding: var(--padding);
+  }
+
+.imageInst {
+ @include size-image;
+border-radius: var(--border-radius);
+}
+
+.imageInst:hover {
+  transform: matrix3d(
+    0.9,
+    -0.5,
+    0,
+    0,
+    0.5,
+    0.87,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1
+  );
+  transition: 0.7s;
+  box-shadow: 0.8rem 0.8rem 0.8rem var(--color-light);
+}
+
+.switch {
+  @include display-flex;
+  margin-top: 100px;
+  border-top: 0.19rem solid var(--color-light);
+  width: var(--width-desktop);
+  padding: 3rem;
+}
+
+@media (max-width: 820px) {
+  .imageScroll {
+  @include size-image;
+  }
+}
+
+@media (max-width: 820px) {
+  .imageInst {
+    max-width: 200px;
+    min-width: 200px;
+    max-height: 250px;
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 414px) {
+  .imageInst {
+    max-width: 90px;
+    min-width: 90px;
+    max-height: 130px;
+    min-height: 130px;
+  }
+}
+
+
+@media (max-width: 320px) {
+  .imageInst {
+    max-width: 60px;
+    min-width: 60px;
+    max-height: 100px;
+    min-height: 100px;
+    border-radius: 8px;
+  }
+}

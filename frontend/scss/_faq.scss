@@ -1,0 +1,74 @@
+@import "./mixin";
+
+.faq {
+  @include display-flex;
+  padding: var(--padding);
+  text-align: center;
+  border-radius: var(--border-radius);
+  flex-direction: column;
+  margin-bottom: 5rem;
+}
+  .faq-question {
+    margin: 0.3rem;
+    background-color: rgb(168, 161, 170);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    padding: var(--padding);
+    width: 70%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-size: var(--font-size);
+    position: relative;
+    transition: all 0.2s ease;
+  }
+
+  .faq-question:after {
+    content: "\02795";
+    position: absolute;
+    left: 10px;
+    font-size: 14px;
+  }
+  
+  .faq-question_active:after {
+    content: "\2796";
+    position: absolute;
+    left: 10px;
+    font-size: 14px;
+  }
+ 
+
+.faq-question:hover {
+  background-color: rgb(140, 136, 143);
+}
+
+.faq-panel {
+  display: none;
+  font-size: var(--font-size);
+  line-height: 1.5;
+  max-width: 70%;
+  color: var(--color-light);
+  font-size: var(--font-size);
+  padding: var(--padding);
+  background-color: rgb(40, 38, 38);
+  border-radius: var(--border-radius);
+  &.faq-panel_active {
+    display: block;
+  }
+}
+
+
+@media (max-width: 390px) {
+  .faq-question {
+    font-size: 0.85rem ;
+    width: 90%;
+  }
+}
+
+@media (max-width: 390px) {
+  .faq-panel {
+    font-size: 0.85rem ;
+  }
+}
+
+

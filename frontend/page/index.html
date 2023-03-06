@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mugen tatoo 🌑 | Accueil</title>
+    <script
+      src="https://unpkg.com/react@16/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <!-- babel -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image/png" href="../image/logo.png" />
+  </head>
+
+  <body>
+    <div class="container_page">
+      <header>
+        <nav>
+          <div class="main-navlinks">
+            <button
+              class="hamburger"
+              type="button"
+              aria-label="Toggle navigation"
+              aria-expanded="false"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <div class="navlinks-container">
+              <a href="#page1" aria-current="page">Accueil</a>
+              <a href="#page2">Projets</a>
+              <a href="#page3">Tatoos</a>
+              <a href="./FAQ.html" target="_blank">FAQ</a>
+              <a href="./reservation.html" target="_blank">Reservation</a>
+            </div>
+          </div>
+
+          <div class="nav-authentication">
+            <a
+              href="./EspaceTatoueur.html"
+              class="sign-user"
+              aria-label="Sign in page"
+            >
+              <img
+                src="../image/icons8-utilisateur-50 (1).png"
+                href="../page/Login.html"
+                alt="user-icon"
+              />
+            </a>
+            <div class="sign-btns">
+              <a href="./EspaceTatoueur.html" target="_blank">
+                <button type="button">Espace tatoueur</button>
+              </a>
+            </div>
+          </div>
+        </nav>
+        <div class="container_logo">
+          <div class="Logo">
+            <img src="../image/mugen-tattoo-logo-blanc.svg" alt="logo" />
+          </div>
+        </div>
+      </header>
+
+      <div class="scroll-container">
+        <div class="scroll-page" id="page1">
+          <div class="Muggen">
+            <h1 class="title is-1">Mugen Tatoo</h1>
+          </div>
+          <div class="line">
+            <span class="Line"></span>
+          </div>
+          <div class="Home">
+            <article class="containerHome">
+              <img
+                class="Presentation"
+                src="../image/presentation3.JPG"
+                alt="presentation"
+              />
+              <p>
+                Aillant fait ses classes sur Marseille avec Inzi au salon
+                Blackcharter,
+              </p>
+              <p>
+                il décide maintenant de rester nomade et voyage à travers le
+                monde pour réaliser vos projets micro réalistes,
+              </p>
+              <p>
+                partager son univers et sa passion pour la mythologie grecque
+                qu’il revisite en la modernisant.
+              </p>
+            </article>
+          </div>
+        </div>
+        <div class="video">
+          <video
+            width="100%"
+            controls
+            src="../video/joined-video-24f5e1a5fb504a879aa3f95dea5cd35e.MP4"
+            alt="video"
+          ></video>
+        </div>
+      </div>
+      <div class="scroll-page" id="page2">
+        <div class="Muggen">
+          <h1 class="title is-1">Projets</h1>
+        </div>
+        <div class="line">
+          <span class="Line"></span>
+        </div>
+
+        <div class="entire-content">
+          <div class="content-carrousel">
+            <figure class="shadow"><img src="../image/projet1.JPG" /></figure>
+            <figure class="shadow"><img src="../image/projet2.JPG" /></figure>
+            <figure class="shadow"><img src="../image/projet3.JPG" /></figure>
+            <figure class="shadow"><img src="../image/projet4.JPG" /></figure>
+            <figure class="shadow"><img src="../image/projet5.JPG" /></figure>
+            <figure class="shadow"><img src="../image/projet6.JPG" /></figure>
+            <figure class="shadow"><img src="../image/projet7.JPG" /></figure>
+            <figure class="shadow"><img src="../image/projet8.JPG" /></figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-page" id="page3">
+        <div class="Muggen">
+          <h1 class="title is-1">Tatoos</h1>
+        </div>
+        <div class="line">
+          <span class="Line"></span>
+        </div>
+
+        <div id="images"></div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-parent">
+        <div class="footer-left">
+          <ul>
+            <span>HORAIRES</span>
+            <li>Lundi au Vendredi : 10h-18h</li>
+            <li>Samedi : 10h-17h</li>
+            <li>Fermé : Mercredi, Dimanche</li>
+          </ul>
+        </div>
+        <div class="footer-center">
+          <div class="logo">
+            <img src="../image/mugen-tattoo-logo-blanc.svg" />
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <ul>
+            <span> ME CONTACTER</span>
+            <li>mugen.tattoo.contact@gmail.com</li>
+            <li>06.75.01.32.91</li>
+            <a href="https://www.facebook.com/mugen.riukiu.52" target="_blank"
+              ><img
+                src="../image/facebook.png"
+                title="facebook"
+                alt="lien facebook"
+            /></a>
+            <a href="https://www.instagram.com/mugen_tattoo/" target="_blank"
+              ><img
+                src="../image/instagram.png"
+                title="instagram"
+                alt="lien instagram"
+            /></a>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <span class="Copyright">© Your Copyright 2023 All Rights Reserved</span>
+
+    <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script
+      data-plugins="transform-es2015-modules-umd"
+      type="text/babel"
+      src="./js/Images.js"
+    ></script>
+  </body>
+</html>

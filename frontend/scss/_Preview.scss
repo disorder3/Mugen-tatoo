@@ -1,0 +1,10 @@
+.Preview {
+  width: 370px;
+  display: flex;
+  flex-direction: row;
+  padding: 1.87rem;
+  .file {
+    padding: var(--padding);
+    color: var(--color-light);
+  }
+}

@@ -1,0 +1,183 @@
+@import "./mixin";
+
+.container_logo {
+  @include display-flex;
+  width: var(--width-desktop);
+  background-color: var(--color-dark);
+  .Logo {
+    @include display-flex;
+    min-width: 250px;
+    max-width: 250px;
+    min-width: 250px;
+    min-height: 100vh;
+  }
+}
+
+nav {
+  @include display-flex;
+  width: var(--width-desktop);
+  z-index: 1000;
+  position: fixed;
+  background: var(--color-dark);
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+.nav-icon {
+  @include display-flex;
+  text-decoration: none;
+  margin-right: 1.3rem;
+}
+
+.nav-icon span {
+  font-size: 1.6rem;
+  margin-left: 0.6rem;
+  font-weight: 400;
+  color: var(--color-dark);
+}
+.nav-icon img {
+  width: 3rem;
+  transform: rotate(-17deg) translateX(5px);
+}
+.hamburger {
+  display: none;
+}
+.navlinks-container a {
+  padding: var(--padding);
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--color-light);
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+.navlinks-container a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 78%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: var(--color-light);
+  transition: transform 0.3s ease-out;
+}
+
+.navlinks-container a:hover::after {
+  transform: scaleX(1);
+}
+
+.sign-btns button {
+  font-size: 1rem;
+  min-width: 90px;
+  padding: 10px 5px;
+  margin: 0 5px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  color: var(--color-light);
+  background: var(--color-gradient);
+  border: 1px solid var(--color-button);
+  // box-shadow: 6px 6px 6px var(--color-button);
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.sign-user {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  nav {
+    padding: 0.9rem 1.3rem;
+    position: fixed;
+    justify-content: space-between;
+  }
+
+  .nav-icon span {
+    font-size: 1.37rem;
+  }
+
+  .hamburger {
+    @include display-flex;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: none;
+    background: var(--color-dark);
+    position: relative;
+  }
+  .hamburger span {
+    display: block;
+    width: var(--width-desktop);
+    height: 2px;
+    background: var(--color-light);
+    position: absolute;
+    pointer-events: none;
+    transition: opacity 0.3s 0.15s ease-out;
+  }
+
+  .hamburger span:nth-child(1),
+  .hamburger span:nth-child(3) {
+    transition: transform 0.3s ease-out;
+  }
+  .hamburger span:nth-child(1) {
+    transform: translateY(7px);
+  }
+  .hamburger span:nth-child(3) {
+    transform: translateY(-7px);
+  }
+  .hamburger.open span:nth-child(1) {
+    transform: translate(0) rotate(135deg);
+  }
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+    transition: opacity 0s ease-out;
+  }
+  .hamburger.open span:nth-child(3) {
+    transform: translate(0) rotate(-135deg);
+  }
+
+  .navlinks-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    background: var(--color-dark);
+    left: 0;
+    height: 100vh;
+    padding: 0.9rem 3rem 0.9rem 1.3rem;
+    border-right: 1px solid var(--color-light);
+    transform: translate(-100%);
+  }
+  .open {
+    transform: translate(0%);
+  }
+  .navlinks-container a {
+    font-size: var(--font-size);
+    margin: 0.6rem 0;
+  }
+
+  .sign-btns {
+    display: none;
+  }
+  .sign-user {
+    display: block;
+    cursor: pointer;
+    border: none;
+  }
+
+  .sign-user img {
+    width: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .nav-icon img {
+    width: 30px;
+  }
+  .nav-icon span {
+    font-size: var(--font-size);
+  }
+}

@@ -1,0 +1,46 @@
+@import "./mixin";
+
+.footer-parent {
+  padding: var(--padding);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--width-desktop);
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  font-size: 1rem;
+  .footer-left {
+    @include display-flex;
+    .footer-center {
+      @include display-flex;
+      flex-direction: column;
+      .footer-right {
+        @include display-flex;
+      }
+    }
+  }
+}
+
+.logo {
+  max-height: 170px;
+  min-height: 170px;
+  max-width: 170px;
+  min-width: 170px;
+}
+
+@media (max-width: 415px) {
+  .footer-parent {
+    flex-direction: column;
+  }
+}
+
+.Copyright {
+  width: var(--width-desktop);
+  @include display-flex;
+  color: var(--color-light);
+  background-color: var(--color-dark);
+  font-size: 0.9rem;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
