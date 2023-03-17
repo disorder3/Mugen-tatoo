@@ -167,7 +167,7 @@ const Reservation = () => {
       lineNumber: 101,
       columnNumber: 9
     }
-  }, "Date de naissance :"), /*#__PURE__*/React.createElement("input", {
+  }, "Date de naissance"), /*#__PURE__*/React.createElement("input", {
     className: `input ${showError("birthday") !== null ? "is-danger" : ""}`,
     id: "birthday",
     type: "date",

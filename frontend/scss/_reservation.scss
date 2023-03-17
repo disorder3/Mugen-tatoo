@@ -7,45 +7,44 @@
   padding: 1.87rem;
   margin: 1.3rem;
   font-size: var(--font-size);
-  text-align: center;
-}
-
-
-ul {
-  text-align: center;
+  @include text-align;
 }
 
 
 .box:nth-child(1):hover {
   background-image: url(../image/presentation2.JPG);
+  filter: grayscale(80%);
  @include background-image;
 }
 
 .box:nth-child(2):hover {
   background-image: url(../image/presentation1.JPG);
+  filter: grayscale(80%);
   @include background-image;
 }
 
 .box:nth-child(3):hover {
   background-image: url(../image/presentation3.JPG);
+  filter: grayscale(80%);
  @include background-image;
 }
 
 .box:nth-child(4):hover {
   background-image: url(../image/presentation1.JPG);
+  filter: grayscale(80%);
  @include background-image;
 }
 
 
 @media (max-width: 450px) {
   .box {
-    text-align: center;
+    @include text-align;
   }
 }
 
 @media (max-width: 950px) and (min-width: 450px) {
   .box {
-      text-align: center;
+      @include text-align;
   }
 }
 
@@ -90,7 +89,7 @@ ul {
   font-size: var(--font-size);
   background: var(--color-gradient);
   padding: 1.87rem;
-  border-radius: 6.25rem;
+  border-radius: var(--border-radius);
   color: var(--color-light);
   border: 0.1rem solid var(--color-light);
 }

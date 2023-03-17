@@ -98,7 +98,7 @@ const Reservation = () => {
       </div>
 
       <div className="field mb-2">
-        <label htmlFor="birthday">Date de naissance :</label>
+        <label htmlFor="birthday">Date de naissance</label>
         <input
           className={`input ${
             showError("birthday") !== null ? "is-danger" : ""

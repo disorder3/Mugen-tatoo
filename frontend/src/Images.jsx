@@ -25,14 +25,6 @@ const Images = () => {
                     ))
                 }
             </div>
-            <div className="switch"></div>
-            <div className="imageGallerie">
-                {
-                    images.map(img => (
-                        <img key={img._id} className="imageInst" src={img.url} />
-                    ))
-                }
-            </div>
         </div>
     )
 }

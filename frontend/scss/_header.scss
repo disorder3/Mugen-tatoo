@@ -35,10 +35,11 @@ nav {
   font-weight: 400;
   color: var(--color-dark);
 }
-.nav-icon img {
+.nav-icon {
   width: 3rem;
   transform: rotate(-17deg) translateX(5px);
 }
+
 .hamburger {
   display: none;
 }
@@ -52,7 +53,7 @@ nav {
   text-align: center;
   position: relative;
 }
-.navlinks-container a::after {
+.navlinks-container a:after {
   content: "";
   display: block;
   position: absolute;
@@ -64,9 +65,10 @@ nav {
   transition: transform 0.3s ease-out;
 }
 
-.navlinks-container a:hover::after {
+.navlinks-container a:hover:after {
   transform: scaleX(1);
 }
+
 
 .sign-btns button {
   font-size: 1rem;

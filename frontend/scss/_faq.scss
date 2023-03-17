@@ -43,6 +43,7 @@
 }
 
 .faq-panel {
+  @include text-align;
   display: none;
   font-size: var(--font-size);
   line-height: 1.5;

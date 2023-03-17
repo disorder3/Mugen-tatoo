@@ -1,4 +1,4 @@
-/////// bouton burger /////////
+//bouton burger
 
 const hamburgerToggler = document.querySelector(".hamburger");
 const navLinksContainer = document.querySelector(".navlinks-container");
@@ -24,7 +24,7 @@ new ResizeObserver((entries) => {
   }
 }).observe(document.body);
 
-/////// foire aux questions ///////////
+//FAQ panel
 
 let questions = document.querySelectorAll(".faq-question");
 questions.forEach((question) => {

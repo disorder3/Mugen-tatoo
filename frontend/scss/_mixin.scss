@@ -4,6 +4,11 @@
     align-items: center;
   }
 
+  @mixin text-align {
+    text-align: justify;
+    text-align-last: center;
+  }
+
   @mixin background-image {
   background-position: center;
   background-size: cover;

@@ -40,32 +40,6 @@ const Images = () => {
       lineNumber: 24,
       columnNumber: 25
     }
-  }))), /*#__PURE__*/React.createElement("div", {
-    className: "switch",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28,
-      columnNumber: 13
-    }
-  }), /*#__PURE__*/React.createElement("div", {
-    className: "imageGallerie",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29,
-      columnNumber: 13
-    }
-  }, images.map(img => /*#__PURE__*/React.createElement("img", {
-    key: img._id,
-    className: "imageInst",
-    src: img.url,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32,
-      columnNumber: 25
-    }
   }))));
 };
 ReactDOM.render( /*#__PURE__*/React.createElement(Images, {

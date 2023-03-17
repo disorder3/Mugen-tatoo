@@ -7,6 +7,8 @@
     padding: var(--padding);
     display: flex;
     flex-direction: row;
+    width: 100%;
+    @include display-flex;
   }
 }
 
@@ -30,20 +32,20 @@
   }
 }
 
+
 .containerHome {
-  @include display-flex;
+  @include text-align;
   width: var(--width-desktop);
   flex-direction: column;
   font-size: var(--font-size);
   background: var(--color-gradient);
-  padding: 1.87rem;
-  text-align: center;
+  padding: 2.87rem;
   border-radius: var(--border-radius);
   box-shadow: 0.3rem 0.3rem 0.9rem rgba(0, 0, 0, 0.3);
   color: var(--color-light);
   border-top: 1px solid var(--color-light);
   border-left: 1px solid var(--color-light);
-  gap: 0.5rem;
+  width: 62.5rem;
 
 
   .container::after {
@@ -61,7 +63,7 @@
   height: var(--image-height);
   object-fit: cover;
   border-radius: 50%;
-  margin-bottom: 1.1rem;
+  margin-bottom: 2.87rem;
   box-shadow: 1rem 0.5rem 1rem var(--color-light);
 
   .video {
