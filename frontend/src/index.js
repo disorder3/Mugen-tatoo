@@ -1,8 +1,8 @@
-import EspaceTatoueur from "../page/js/EspaceTatoueur";
-import Images from "../page/js/Images";
-import ImagesManager from "../page/js/ImagesManager";
-import Form from "../page/js/Login";
-import Reservation from "../page/js/Reservation";
+import EspaceTatoueur from "./dist/EspaceTatoueur";
+import Images from "./dist/Images";
+import ImagesManager from "./dist/ImagesManager";
+import Form from "./dist/login";
+import Reservation from "./dist/Reservation";
 
 const App = () => (
     <>
