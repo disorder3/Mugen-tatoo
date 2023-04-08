@@ -1,7 +1,5 @@
 "use strict";
 
-var _jsxFileName = "/Users/jeremy/Documents/3WA/mugen/frontend/src/EspaceTatoueur.jsx",
-  _this = void 0;
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
@@ -25,45 +23,14 @@ var EspaceTatoueur = function EspaceTatoueur() {
     className: "is-flex is-flex-direction-column is-justify-content-center is-align-items-center",
     style: {
       marginBottom: "4rem"
-    },
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18,
-      columnNumber: 5
     }
   }, /*#__PURE__*/React.createElement("div", {
-    className: "content",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22,
-      columnNumber: 7
-    }
+    className: "content"
   }, /*#__PURE__*/React.createElement("h1", {
-    className: "has-text-white",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23,
-      columnNumber: 9
-    }
+    className: "has-text-white"
   }, "Bonjour ", user.name, " !")), /*#__PURE__*/React.createElement("button", {
     className: "button is-danger",
-    onClick: logout,
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27,
-      columnNumber: 7
-    }
+    onClick: logout
   }, "Deconnexion"));
 };
-ReactDOM.render( /*#__PURE__*/React.createElement(EspaceTatoueur, {
-  __self: void 0,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 34,
-    columnNumber: 17
-  }
-}), document.getElementById("EspaceTatoueur"));
+ReactDOM.render( /*#__PURE__*/React.createElement(EspaceTatoueur, null), document.getElementById("EspaceTatoueur"));
