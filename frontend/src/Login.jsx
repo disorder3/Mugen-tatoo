@@ -8,7 +8,7 @@ const Form = () => {
   const [loading, setLoading] = React.useState(false); //utilisé pour indiquer si une requête est en cours d'exécution. Il est initialisé à "false" et est géré à l'aide de "setLoading".
   const [user, useUser] = React.useState(
     JSON.parse(localStorage.getItem("user")) // obtenir les informations de l'utilisateur connecté
-);
+  );
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -54,17 +54,18 @@ const Form = () => {
     setMessage(null);
     localStorage.setItem("token", data.token);
     localStorage.setItem("user", JSON.stringify(data.user));
-    window.location.replace('EspaceTatoueur.html')
+    window.location.replace("EspaceTatoueur.html");
   };
   //Si le statut de la réponse est égal à 200, cela signifie que la requête a réussi et il n'y a pas d'erreurs à afficher
   //Il stocke ensuite le jeton d'authentification reçu dans "localStorage" sous la clé "token", et les informations d'utilisateur reçues sous la clé "user". Il utilise "JSON.stringify()" pour convertir l'objet utilisateur en chaîne JSON avant de le stocker, pour pouvoir le récupérer plus tard avec "JSON.parse()"
   //userUser pour mettre à jour l'état de l'utilisateur
 
   if (user) {
-    return window.location.replace('EspaceTatoueur.html')
-}
+    return window.location.replace("EspaceTatoueur.html");
+  }
 
-  return ( //strucutre html
+  return (
+    //strucutre html
     <div className="Logn" style={{ minHeight: "50vh" }}>
       <div className="is-flex-direction-column">
         <div className="is-flex is-justify-content-space-around mb-5">
@@ -125,8 +126,9 @@ const Signin = ({
         <div className="field mb-2">
           <input
             type="email"
-            className={`input ${showError("email") !== null ? "is-danger" : ""
-              }`}
+            className={`input ${
+              showError("email") !== null ? "is-danger" : ""
+            }`}
             placeholder="Email"
             name="email"
             onChange={handleChange}
@@ -137,8 +139,9 @@ const Signin = ({
         <div className="field mb-5">
           <input
             type="password"
-            className={`input ${showError("password") !== null ? "is-danger" : ""
-              }`}
+            className={`input ${
+              showError("password") !== null ? "is-danger" : ""
+            }`}
             placeholder="Mot de passe"
             name="password"
             onChange={handleChange}
@@ -225,7 +228,7 @@ const Signup = ({
       >
         Envoyer
       </button>
-    </form>//fin structure html
+    </form> //fin structure html
   );
 };
 
