@@ -99,7 +99,7 @@ var Form = function Form() {
             setMessage(null);
             localStorage.setItem("token", data.token);
             localStorage.setItem("user", JSON.stringify(data.user));
-            window.location.replace('EspaceTatoueur.html');
+            window.location.replace("EspaceTatoueur.html");
           case 18:
           case "end":
             return _context.stop();
@@ -115,7 +115,7 @@ var Form = function Form() {
   //userUser pour mettre à jour l'état de l'utilisateur
 
   if (user) {
-    return window.location.replace('EspaceTatoueur.html');
+    return window.location.replace("EspaceTatoueur.html");
   }
   return (
     /*#__PURE__*/

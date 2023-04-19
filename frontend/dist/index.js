@@ -1,10 +1,10 @@
 "use strict";
 
-var _EspaceTatoueur = _interopRequireDefault(require("./dist/EspaceTatoueur"));
-var _Images = _interopRequireDefault(require("./dist/Images"));
-var _ImagesManager = _interopRequireDefault(require("./dist/ImagesManager"));
-var _login = _interopRequireDefault(require("./dist/login"));
-var _Reservation = _interopRequireDefault(require("./dist/Reservation"));
+var _EspaceTatoueur = _interopRequireDefault(require("./EspaceTatoueur"));
+var _Images = _interopRequireDefault(require("./Images"));
+var _ImagesManager = _interopRequireDefault(require("./ImagesManager"));
+var _login = _interopRequireDefault(require("./login"));
+var _Reservation = _interopRequireDefault(require("./Reservation"));
 var _Faq = _interopRequireDefault(require("./Faq"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 var App = function App() {

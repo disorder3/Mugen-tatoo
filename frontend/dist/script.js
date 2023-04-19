@@ -18,14 +18,3 @@ new ResizeObserver(function (entries) {
     navLinksContainer.style.transition = "none";
   }
 }).observe(document.body);
-
-//FAQ panel
-
-var questions = document.querySelectorAll(".faq-question");
-questions.forEach(function (question) {
-  question.addEventListener("click", function () {
-    question.classList.toggle("faq-question_active");
-    var nextElement = question.nextElementSibling;
-    nextElement.classList.toggle("faq-panel_active");
-  });
-});

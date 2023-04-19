@@ -24,14 +24,5 @@ new ResizeObserver((entries) => {
   }
 }).observe(document.body);
 
-//FAQ panel
 
-let questions = document.querySelectorAll(".faq-question");
-questions.forEach((question) => {
-  question.addEventListener("click", () => {
-    question.classList.toggle("faq-question_active");
-    const nextElement = question.nextElementSibling;
-    nextElement.classList.toggle("faq-panel_active");
-  });
-});
 
