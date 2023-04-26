@@ -3,7 +3,6 @@ const { reservationValidation, catchErrors, imageValidation } = require("../midd
 const { reservation } = require("../controllers/reservation.controller");
 const multer = require("multer");
 
-
 const upload = multer(); // initialise multer
 const router = express.Router(); // crée un routeur express
 

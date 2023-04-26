@@ -15,3 +15,4 @@ pour compiler sass :
 - cd frontend
 - sass --watch --style=compressed scss/index.scss css/style.css
 
+# Mugen-tatoo
