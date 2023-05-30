@@ -1,5 +1,5 @@
 const Images = require('../models/images.model')
-const cloudinary = require("../middlewares/cloudinary"); // importe le middleware cloudinary
+const cloudinary = require("../middlewares/cloudinary"); 
 
 exports.addImages = async (req, res) => {
     try {
