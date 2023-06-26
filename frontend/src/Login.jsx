@@ -21,16 +21,13 @@ const Form = () => {
     if (!errors) return null;
 
     const error = errors.find((e) => e.param === name);
-    //methode "find" de l'objet Array pour parcourir les éléments de l'erreur (errors) et renvoie la première erreur qui correspond à la condition spécifiée dans la fonction de rappel. La fonction de rappel prend un argument "e" qui est chaque élément de "errors" et vérifie si la propriété "param" de cet élément est égale à la variable "name". Si c'est le cas, cela signifie que c'est l'erreur qui correspond au champ de formulaire qui a causé l'erreur, et il renvoie cette erreur dans la variable "error". Si aucune erreur ne correspond, "find()" renvoie "undefined".
     if (!error) return null;
     return <span className="error">{error.msg}</span>;
   }; //La fonction "showError" est utilisée pour afficher les erreurs associées à un champ de formulaire spécifique
 
   const handleSubmit = async (e, URL) => {
-    //La fonction "handleSubmit" est utilisée pour gérer la soumission du formulaire
     e.preventDefault();
     setLoading(true);
-    //setLoading(true)" pour mettre à jour l'état de chargement de l'application
     const res = await fetch(URL, {
       method: "POST",
       headers: {
@@ -38,17 +35,14 @@ const Form = () => {
       },
       body: JSON.stringify(formData),
     });
-    //la fonction "fetch()" pour envoyer une requête HTTP de type "POST" à l'URL spécifiée avec les données de formulaire dans le corps de la requête sous forme de chaîne JSON
     const data = await res.json();
     setLoading(false);
-    //stock la réponse dans la variable "data". En général cette réponse est un objet JSON qui contient les données renvoyées par le serveur (comme un token d'authentification, des informations d'utilisateur, des messages d'erreur, etc.)
 
     if (res.status !== 200) {
       setErrors(data.errors);
       setMessage(data.message);
       return;
     }
-    // Si le statut n'est pas égal à 200, cela signifie que la requête a échoué et il y a des erreurs à afficher. Il utilise alors la fonction "setErrors(data.errors)" pour mettre à jour l'état des erreurs avec les erreurs renvoyées par le serveur
 
     setErrors(null);
     setMessage(null);
@@ -56,9 +50,6 @@ const Form = () => {
     localStorage.setItem("user", JSON.stringify(data.user));
     window.location.replace("EspaceTatoueur.html");
   };
-  //Si le statut de la réponse est égal à 200, cela signifie que la requête a réussi et il n'y a pas d'erreurs à afficher
-  //Il stocke ensuite le jeton d'authentification reçu dans "localStorage" sous la clé "token", et les informations d'utilisateur reçues sous la clé "user". Il utilise "JSON.stringify()" pour convertir l'objet utilisateur en chaîne JSON avant de le stocker, pour pouvoir le récupérer plus tard avec "JSON.parse()"
-  //userUser pour mettre à jour l'état de l'utilisateur
 
   if (user) {
     return window.location.replace("EspaceTatoueur.html");

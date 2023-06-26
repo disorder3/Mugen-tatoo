@@ -1,8 +1,7 @@
-const SERVER_URL = "http://localhost:4001"; // serveur sur lequel l'application web communique
-
+const SERVER_URL = "http://localhost:4001"; 
 const ImagesManager = () => {
   const [user, useUser] = React.useState(
-    JSON.parse(localStorage.getItem("user")) // obtenir les informations de l'utilisateur connecté
+    JSON.parse(localStorage.getItem("user")) 
   );
   const [images, setImages] = React.useState([]);
   const [selectedImages, setSelectedImages] = React.useState([]);

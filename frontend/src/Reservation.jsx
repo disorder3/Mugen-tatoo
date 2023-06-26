@@ -32,7 +32,6 @@ const Reservation = () => {
   //Il commence par vérifier s'il y a des erreurs en utilisant "if (!errors) return null;", qui signifie que s'il n'y a pas d'erreur, il ne fait rien et retourne "null". S'il y a des erreurs, la fonction utilise la méthode "find()" pour rechercher l'erreur associée au nom de champ donné. Si l'erreur existe, elle est retournée sous forme de message d'erreur. Cette fonction permet d'afficher des messages d'erreur spécifiques à chaque champ de formulaire lorsque des erreurs sont détectées lors de la validation du formulaire.
 
   const handleSubmit = async (e) => {
-    //définit une fonction asynchrone qui prend en paramètre un événement "e" (généralement l'événement de soumission de formulaire). Cette fonction sera appelée lorsque l'utilisateur soumet le formulaire
     e.preventDefault(); //est utilisée pour annuler l'événement de soumission de formulaire par défaut. En appelant "preventDefault()" sur l'événement de soumission, cela empêche le navigateur de recharger la page ou de suivre le lien d'action du formulaire
 
     const body = new FormData(); // crée un nouveau objet FormData

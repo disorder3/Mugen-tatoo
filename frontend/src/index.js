@@ -1,7 +1,7 @@
 import EspaceTatoueur from "./EspaceTatoueur";
 import Images from "./Images";
 import ImagesManager from "./ImagesManager";
-import Form from "./login";
+import Form from "./Login";
 import Reservation from "./Reservation";
 import Faq from "./Faq"
 
